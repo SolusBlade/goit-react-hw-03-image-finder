@@ -5,6 +5,8 @@ const Button = ({ onClick }) => {
   return <button className={s.btn } onClick={onClick}>Load more</button>;
 };
 
-Button.propTypes = {};
+Button.propTypes = {
+  onClick: PropTypes.func.isRequired,
+};
 
 export default Button;

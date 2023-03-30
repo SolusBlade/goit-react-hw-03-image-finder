@@ -1,10 +1,11 @@
 import s from './Modal.module.css';
 import { createPortal } from 'react-dom';
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 
 const modalRoot = document.querySelector('#modal-root');
 
-// ({ title, url, closeModal })
+
 class Modal extends Component {
   componentDidMount() {
     window.addEventListener('keydown', this.handleCloseModalByEscape);
@@ -42,5 +43,11 @@ class Modal extends Component {
     );
   }
 }
+
+Modal.propTypes = {
+  closeModal: PropTypes.func.isRequired,
+  image: PropTypes.string.isRequired,
+};
+
 
 export default Modal;
