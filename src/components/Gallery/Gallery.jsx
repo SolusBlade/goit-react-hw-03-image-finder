@@ -74,7 +74,7 @@ class Gallery extends Component {
   };
 
   render() {
-    const { images, error, modalData, isLoading, isBtn } = this.state;
+    const { images, modalData, isLoading, isBtn } = this.state;
     return (
       <>
         <ImageGallery images={images} openModal={this.openModal} />
